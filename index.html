@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<title>James</title>
+<script>
+var _targetdiv = null;
+function showdiv(id) {
+    if(_targetdiv)
+        _targetdiv.style.display = 'none';
+    _targetdiv = document.getElementById(id);
+    _targetdiv.style.display = 'block';
+}
+var _targetdiv = null;
+function hidediv(id) {
+    if(_targetdiv)
+        _targetdiv.style.display = 'block'
+    _targetdiv = document.getElementById(id);
+    _targetdiv.style.display = 'none';
+}
+</script>
+<body>
+<div style="background-image: url(Roe Deer comp.jpg);">
+<div class="Header"><h1>James</h1></div>
+<div class="Navbar">
+   <div class="NavbarItem" title="Contacts" onclick="showdiv('Contacts1')"><h1>☎️ Contacts</h1></div>
+
+    <div class="NavbarItem" title="Overview" onclick="showdiv('Overview1')"><h1>📊 About Me</h1></div>
+   
+   <div class="NavbarItem" title="Education" onclick="showdiv('Education1')"><h1>🎓 Education</h1></div>
+
+   <div class="NavbarItem" title="Employment History" onclick="showdiv('Work1')"><h1>🛠️ Employment History</h1></div>
+
+   <div class="NavbarItem" title="Sports and recreational interests" onclick="showdiv('Interests1')"><h1>🎹 Sports and Leisure</h1></div>
+
+   <div class="NavbarItem" title="About my experience of using HTML, CSS, JS, etc" onclick="showdiv('Codestuff1')"><h1>&lt;/&gt; Website Editing</h1></div>
+   </div>
+<div class="Main">
+    <div id="Contacts1"><p class="x" onclick="hidediv('Contacts1')">X&nbsp;</p>
+        <h1>☎️ Contacts</h1><p>Tel: 07123 456789<br />
+        Email: <a href="mailto:example@hotmail.co.uk&body=Dear James%2C%0D%0A" title="Send me an email">example@hotmail.co.uk</a><br />
+        Facebook: <a href="https://www.facebook.com/" target="_blank" title="My Facebook Profile">View my profile</a></p></div>
+           
+    <div id="Overview1"><p class="x" onclick="hidediv('Overview1')">X&nbsp;</p>
+        <h1>📊 About Me</h1>
+        <p>Age: 24<br />D.O.B.: <sup>th</sup> Monthber 1994<br />Gender: Male<br />Home location: Bromsgrove, Worcestershire</p>
+        </div>
+    <div id="Education1"><p class="x" onclick="hidediv('Education1')">X&nbsp;</p>
+        <h1>🎓 Education</h1>
+        <p>School:<br />A-levels (2013):<br />Maths - A*<br />Physics - A<br />Latin - A<br />Music - B<br />&nbsp;<br />AS-level (2012):<br />Electronics - A<br />&nbsp;<br />University:<br />BA Music (Hons) - 2:1 - Durham University - 2016<br />PGCE Music - Birmingham City University - 2017</p></div>
+    <div id="Work1"><p class="x" onclick="hidediv('Work1')">X&nbsp;</p>
+        <h1>🛠️ Employment History</h1>
+        <p>Work details</p></div>
+    <div id="Interests1"><p class="x" onclick="hidediv('Interests1')">X&nbsp;</p>
+        <h1>🎹 Sports and Leisure</h1>
+        <p>Hobby details</p></div>
+    <div id="Codestuff1"><p class="x" onclick="hidediv('Codestuff1')">X&nbsp;</p>
+        <h1>&lt;/&gt; Website Editing</h1>
+        <p>Details about me learning how to edit websites.</p></div>
+</div>
+<div id="footer"><br /><p>Page load time: <span id="demo"></span></p>
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+    </div>
+</div>    
+</body>
+</html>
